@@ -1,0 +1,5 @@
+.nested-fields
+  %div.period.cp_iptxt
+    = f.select :period, [["月", "月"], ["週", "週"], ["日", "日"]], include_blank: "周期"
+  .form-group.mt-5
+    = f.text_area :job_description, rows: 3,  cols: 80, placeholder: "仕事内容", class: "tf form-control"

@@ -1,0 +1,171 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fixed-form {
+  display: inline-flex;
+  width: 100%;
+}
+
+.period {
+  margin-top: 30px;
+  select {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+}
+
+#task_period {
+	width: 150px;
+	height: 30px;
+}
+
+.links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.add_fields {
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #DCDCDC;
+  text-align:center;
+  line-height: 50px;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #4da9f5;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #4da9f5;
+}
+
+.button_area {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.icon::before, .icon--plus::after {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid #fff;
+  transform: translateX(-50%);
+}
+
+.icon--plus:after {
+  top: 3px;
+  left: -3px;
+  transform: rotate(90deg);
+}
+
+.add-forms {
+  margin-bottom: 70px;
+}
+
+.nested-fields{
+  margin-bottom: 90px;
+}
+
+.download-button{
+  float: right;
+  margin-right: 20px;
+}
+
+.form-marge {
+  margin-left: 190px;
+}
+
+.form-width{
+  width: 33%;
+  input {
+    font-size: 15px;
+  }
+}
+
+.top-text-area{
+  margin-bottom: 80px;
+  background-color: #C0C0C0;
+  opacity: 0.7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.required .control-label:after {
+  content:"*";color:red;
+}
+
+.require-alert {
+  background-color:red;
+  opacity: 0.7;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+.form-group {
+  textarea {
+    font-size: 15px;
+  }
+}
+
+.period {
+  select {
+  font-size: 13px;
+  }
+}
+
+.complete-container {
+  height: 400px;
+  position: relative;
+
+  .complte-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 350px;
+    height: 100px;
+  }
+
+  p {
+    font-size: 23px;
+  }
+
+  h2 {
+    border-bottom: 3px solid #000;
+    border-left: 14px solid #000;
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 18px;
+    padding-top: 14px;
+  }
+}

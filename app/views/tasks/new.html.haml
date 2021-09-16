@@ -1,0 +1,27 @@
+.container
+  .col-md-12.margin-top-5per.artcle-block2
+    - if @alert.present?
+      .require-alert
+        = @alert
+    %h1.text-center.top-text-area
+      タスク入力画面
+    .padding-bottom-15
+      = form_with(model: @task, local: true) do |s|
+        %div.fixed-form
+          .mb-3.form-width.required
+            = s.label '部門', class:"control-label"
+            = s.text_field :department, class:"form-control"
+          .mb-3.form-marge.form-width
+            = s.label '等級', class:"control-label"
+            = s.text_field :grade, class:"form-control"
+          .mb-3.form-marge.form-width.required
+            = s.label '職種', class:"control-label"
+            = s.text_field :occupation, class:"form-control"
+        .fluctuation
+          .add-forms
+            = s.fields_for :fix_tasks do |t|
+              = render 'fix_tasks_fields', f: t
+            .links
+              = link_to_add_association "+", s, :fix_tasks, class: 'form-add-button', partial: 'fix_tasks_fields'
+          %div.button_area.mb-5
+            = s.button '送信', type: 'button', onclick: 'submit();', class: "btn btn-primary btn-lg", id: "button2"

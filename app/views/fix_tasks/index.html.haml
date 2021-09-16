@@ -1,0 +1,20 @@
+.index-top-area.mt-5.mb-5
+  .download-area
+  = link_to "CSVダウンロード", fix_tasks_path(format: :csv), class: "btn btn-secondary download-button btn-lg"
+  %h1.text-center
+    顧問先業務一覧画面
+%table
+  - @fix_tasks.each do |task|
+    %tr
+      %td
+        = task.task&.department
+      %td
+        = task.task&.grade
+      %td
+        = task.task&.occupation
+      %td
+        = task&.period
+      %td
+        = task&.job_description
+
+= paginate @fix_tasks
