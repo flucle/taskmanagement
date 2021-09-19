@@ -2,10 +2,24 @@
   .download-area
   = link_to "CSVダウンロード", fix_tasks_path(format: :csv), class: "btn btn-secondary download-button btn-lg"
   %h1.text-center
-    顧問先業務一覧画面
-%table
+    顧問先タスク調査一覧画面
+%table.under-line
+  %th
+    = ""
+  %th
+    = "部門"
+  %th
+    = "等級"
+  %th
+    = "職種"
+  %th
+    = "周期"
+  %th
+    = "仕事内容"
   - @fix_tasks.each do |task|
     %tr
+      %td
+        = task&.id
       %td
         = task.task&.department
       %td
