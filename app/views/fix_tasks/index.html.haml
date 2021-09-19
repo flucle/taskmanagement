@@ -1,30 +1,10 @@
 .index-top-area.mt-5.mb-5
   .download-area
   = link_to "CSVダウンロード", fix_tasks_path(format: :csv), class: "btn btn-secondary download-button btn-lg"
+  = image_tag src='/assets/logo.png', size: "70x70", class: "company-logo"
   %h1.text-center
     顧問先タスク調査一覧画面
-  .notes.text-center
-    %p
-      【著作権とご利用上の制限】
-      %br
-      著作権は真田直和にあります。
-      %br
-      1) 損害について
-      %br
-      あなたがこのソフトウェアをご利用になることで生じたいかなる損害に対しても、
-      %br
-      当方が保証することはありません。
-      %br
-      2)第三者への受け渡し
-      %br
-      このプログラムをクライアント以外への再配布することを禁じます。
-      %br
-      %br
-      2021年10月
-      真田直和社会保険労務士事務所
-      %br
-      合同会社SANADAコンサルティング
-      代表 真田直和
+  = render 'notes'
 %table.under-line
   %th
     = ""

@@ -31,6 +31,10 @@ table tr:nth-child(odd){
   }
 }
 
+.text-margin-top {
+  margin-top: 20px;
+}
+
 .how-use {
   display: flex;
   justify-content: center;
@@ -48,4 +52,11 @@ table tr:nth-child(odd){
   line-height: 20px;
   position: absolute;
   left: 0;          // 追記
+}
+
+.cp_iptxt {
+  display: flex;
+  p {
+    margin-left: 25px;
+  }
 }
