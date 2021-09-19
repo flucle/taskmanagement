@@ -22,3 +22,30 @@ table tr:nth-child(odd){
     font-size: 13px;
   }
 }
+
+.notes {
+  display: block;
+  p {
+    text-align: left;
+	  display: inline-block;
+  }
+}
+
+.how-use {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 250px;
+  margin-bottom: 40px;
+}
+
+.intent-use {
+  margin: 0;
+  line-height: 20px;
+}
+
+.entry-rule {
+  line-height: 20px;
+  position: absolute;
+  left: 0;          // 追記
+}

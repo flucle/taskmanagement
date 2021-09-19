@@ -3,8 +3,11 @@
     - if @alert.present?
       .require-alert
         = @alert
-    %h1.text-center.top-text-area
-      タスク入力画面
+    %h1.text-center.top-text-area.text-bottom
+      タスク調査(仕事の棚卸)
+    .how-use
+      = render 'entry-rule'
+      = render 'intent-use'
     .padding-bottom-15
       = form_with(model: @task, local: true) do |s|
         %div.fixed-form
