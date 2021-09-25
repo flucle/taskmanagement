@@ -11,8 +11,8 @@ class TasksController < ApplicationController
       incomplete_task << t if (t.job_description.present? && t.period.empty?) || (t.job_description.empty? && t.period.present?)
     end
 
-    if incomplete_task.empty?
-      @task.fix_tasks.map {|t| t.save if t.job_description.present? && t.task.department.present? && t.task.occupation.present? && t.period.present?}
+    if incomplete_task.empty? && @task.department.present? &&  @task.occupation.present? && @task.company_name.present?
+      @task.fix_tasks.map {|t| t.save if t.job_description.present? && t.task.department.present? && t.task.occupation.present? && t.task.company_name.present? && t.period.present?}
       @task.fix_tasks.map{|t| t.destroy if t.job_description.empty? && t.period.empty?}
       redirect_to complete_tasks_path
     else
@@ -25,6 +25,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:department, :grade, :occupation, fix_tasks_attributes: [:id, :period, :job_description])
+    params.require(:task).permit(:department, :grade, :occupation, :company_name, fix_tasks_attributes: [:id, :period, :job_description])
   end
 end

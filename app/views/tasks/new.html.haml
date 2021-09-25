@@ -12,6 +12,9 @@
       = form_with(model: @task, local: true) do |s|
         %div.fixed-form
           .mb-3.form-width.required
+            = s.label '会社名', class:"control-label"
+            = s.text_field :company_name, class:"form-control"
+          .mb-3.form-marge.form-width.required
             = s.label '部門', class:"control-label"
             = s.text_field :department, class:"form-control"
           .mb-3.form-marge.form-width
