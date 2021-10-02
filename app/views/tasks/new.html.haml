@@ -12,16 +12,16 @@
       = form_with(model: @task, local: true) do |s|
         %div.fixed-form
           .mb-3.form-width.required
-            = s.label '会社名', class:"control-label"
+            = s.label '会社名', class:"control-label label-size"
             = s.text_field :company_name, class:"form-control"
           .mb-3.form-marge.form-width.required
-            = s.label '部門', class:"control-label"
+            = s.label '部門', class:"control-label label-size"
             = s.text_field :department, class:"form-control"
-          .mb-3.form-marge.form-width
-            = s.label '等級', class:"control-label"
+          .mb-3.form-marge.form-width.non-required
+            = s.label '等級', class:"control-label label-size"
             = s.text_field :grade, class:"form-control"
           .mb-3.form-marge.form-width.required
-            = s.label '職種', class:"control-label"
+            = s.label '職種', class:"control-label label-size"
             = s.text_field :occupation, class:"form-control"
         .fluctuation
           .add-forms

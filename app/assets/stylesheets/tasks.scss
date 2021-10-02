@@ -126,6 +126,12 @@ a.btn--orange:hover {
 
 .required .control-label:after {
   content:"*";color:red;
+  font-size: 20px;
+}
+
+.non-required .control-label:after {
+  content:"*";color:white;
+  font-size: 20px;
 }
 
 .require-alert {
