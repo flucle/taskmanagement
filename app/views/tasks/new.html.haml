@@ -13,16 +13,16 @@
         %div.fixed-form
           .mb-3.form-width.required
             = s.label '会社名', class:"control-label label-size"
-            = s.text_field :company_name, class:"form-control"
+            = s.text_field :company_name, class:"form-control", placeholder: "会社名"
           .mb-3.form-marge.form-width.required
             = s.label '部門', class:"control-label label-size"
-            = s.text_field :department, class:"form-control"
+            = s.text_field :department, class:"form-control", placeholder: "部門"
           .mb-3.form-marge.form-width.non-required
             = s.label '等級', class:"control-label label-size"
-            = s.text_field :grade, class:"form-control"
+            = s.text_field :grade, class:"form-control", placeholder: "等級"
           .mb-3.form-marge.form-width.required
             = s.label '職種', class:"control-label label-size"
-            = s.text_field :occupation, class:"form-control"
+            = s.text_field :occupation, class:"form-control", placeholder: "職種"
         .fluctuation
           .add-forms
             = s.fields_for :fix_tasks do |t|
