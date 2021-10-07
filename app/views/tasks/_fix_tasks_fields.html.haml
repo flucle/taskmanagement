@@ -1,5 +1,5 @@
 .nested-fields
-  %div.period.text-size
+  %div.period.text-size.required
     = f.label '周期', class:"control-label label-size"
     .cp_iptxt
       = f.select :period, [["月", "月"], ["週", "週"], ["日", "日"]], include_blank: "周期"
@@ -9,6 +9,6 @@
         &nbsp;&nbsp;週・・・週単位で発生する仕事。
         %br
         &nbsp;&nbsp;月・・・月・半年・年単位で発生する仕事。
-  .form-group.mt-5
+  .form-group.mt-5.required
     = f.label '仕事内容', class:"control-label label-size"
     = f.text_area :job_description, rows: 3,  cols: 80, placeholder: "仕事内容", class: "tf form-control"
