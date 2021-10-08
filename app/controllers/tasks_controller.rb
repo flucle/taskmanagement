@@ -7,11 +7,13 @@ class TasksController < ApplicationController
   def create
     @task =Task.new(task_params)
     incomplete_task = []
+    complete_task = []
     @task.fix_tasks.each do |t|
       incomplete_task << t if (t.job_description.present? && t.period.empty?) || (t.job_description.empty? && t.period.present?)
+      complete_task << t if t.job_description.present? && t.period.present?
     end
 
-    if incomplete_task.empty? && @task.department.present? &&  @task.occupation.present? && @task.company_name.present?
+    if incomplete_task.empty? && complete_task.present? && @task.department.present? &&  @task.occupation.present? && @task.company_name.present?
       @task.fix_tasks.map {|t| t.save if t.job_description.present? && t.task.department.present? && t.task.occupation.present? && t.task.company_name.present? && t.period.present?}
       @task.fix_tasks.map{|t| t.destroy if t.job_description.empty? && t.period.empty?}
       redirect_to complete_tasks_path
