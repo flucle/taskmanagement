@@ -64,3 +64,13 @@ table tr:nth-child(odd){
 .label-size {
   font-size: 14px;
 }
+
+label[for="task_fix_tasks_attributes_0_周期"]:after {
+  content:"*";color:red;
+  font-size: 20px;
+}
+
+label[for="task_fix_tasks_attributes_0_仕事内容"]:after {
+  content:"*";color:red;
+  font-size: 20px;
+}
